@@ -1,0 +1,12 @@
+name: ModernWeapons
+version: 1.3.1
+author: DarkBlade12
+website: http://dev.bukkit.org/profiles/DarkBladee12
+
+main: com.DarkBlade12.ModernWeapons.ModernWeapons
+
+commands:
+  mw:
+    description: General ModernWeapons command
+    usage: See the devBukkit page for command informations!
+    aliases: [mwe, mweapons, modernweapons]

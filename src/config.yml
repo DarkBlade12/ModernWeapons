@@ -1,0 +1,87 @@
+# |\ \--------------ModernWeapons-----------/ /|
+# |/ /                                      \ \|
+# |\ \                 Config               / /|
+# |/ /                                      \ \|
+# |\ \--------------------------------------/ /|
+#
+# Copyright DarkBlade12; All rights reserved.
+# DarkBlade12 is the developer and respective owner of this plugin.
+
+# General settings
+General:
+ 
+ # Value if the player starts with a full magazine when he gets a new weapon
+ # If this is false, the player has to reload the weapon first
+ FullMagazineStart: false
+ 
+ # If this is set true, it'll check if pvp in your current area is denied and will block weapon usage
+ # If WorldGuard is installed, it'll check for pvp-flags
+ DisableInNonPvpAreas: true
+ 
+ # If this is true, explosions from weapons will do block damage
+ BlockDamage: false
+ 
+ # If this is true, a weapon will try to reload, when the shots you've left reach 0
+ AutoReload: true
+ 
+ # If this is true, weapons will not consume ammo when you're in creative mode
+ CreativeUnlimitedAmmo: false
+ 
+ # If this is true, blood particle effects will appear if you shoot someone in the head
+ HeadshotEffect: true
+ 
+ # List of WorldLimit settings
+ WorldLimit:
+ 
+  # If this is set to true, the weapons can only be used in the worlds entered in the Worlds list
+  Enabled: false
+  
+  # List of worlds, where weapons are enabled
+  # Only will be active if "Enabled" is set to true
+  Worlds:
+   - world
+   - world_nether
+   - world_the_end
+
+ 
+# List of message settings
+MessageOptions:
+
+ # If this is set to true, the player will receive all weapon related messages
+ # Does not affect the Headshot and Death message
+ Enabled: false
+ 
+ # If this is set to true, the Headshot message will be sended
+ HeadshotMessage: true
+ 
+ # If this is true, the custom death message will show if the player is killed by a weapon from this plugin
+ CustomDeathMessage: true
+ 
+ # If this is true, the Disabled message will show if you try to use a weapon in a non pvp area
+ # Only active when DisableInNonPvpAreas is set to true
+ DisabledMessage: true
+ 
+# List of messages
+# These can be changed!
+Messages:
+ NoMagazine: '&4&lYou dont have any bullets!'
+ WeaponReloaded: '&a&lThe %weapon% has been reloaded!'
+ HeadshotShooter: '&a&lYouve just shot %player% into the head!'
+ HeadshotVictim: '&4&lYour head got pierced by %player%!'
+ Death: '&8&l%killer% &r&a[%weapon%] &7&l%player%'
+ Disabled: '&4&lYou are not allowed to use weapons here!'
+ 
+# Knife settings
+Knife:
+ 
+ # If this is true, players will be able to use knifes
+ Enabled: true
+ 
+ # Id of the item that is used as a knife
+ Item: 352,1
+ 
+ # Normal damage of the knife
+ Damage: 5
+ 
+ # Damage of the knife when hit in the victim's back 
+ BackstabDamage: 20

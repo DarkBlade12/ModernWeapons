@@ -1,0 +1,43 @@
+# |\ \--------------ModernWeapons-----------/ /|
+# |/ /                                      \ \|
+# |\ \                Grenades              / /|
+# |/ /                                      \ \|
+# |\ \--------------------------------------/ /|
+# M-67
+M-67:
+ General:
+  Item: 341,1
+  Lore:
+   - '&cA common grenade'
+  Cooldown: 2000
+ Explosion:
+  Delay: 3
+  Damage: 12
+  Range: 7
+  Smoke: true
+# Semtex
+Semtex:
+ General:
+  Item: 378,1
+  Lore:
+   - '&aA grenade that sticks to enemies'
+  Cooldown: 2000
+ Explosion:
+  Delay: 2
+  Damage: 18
+  Range: 3
+ Ability:
+  Sticky: true
+# Flashbang
+Flashbang:
+ General:
+  Item: 377,1
+  Lore:
+   - '&8Blind your enemies'
+  Cooldown: 1000
+ Explosion:
+  Delay: 0
+  Range: 5
+ Ability:
+  Effects:
+   - Blindness,20

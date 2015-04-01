@@ -69,7 +69,8 @@ public class WeaponListener implements Listener {
 				return;
 			} else if (plugin.hasWorldGuard) {
 				RegionManager rm = plugin.getWorldGuard().getRegionManager(p.getWorld());
-				if (!rm.getApplicableRegions(p.getLocation()).allows(DefaultFlag.PVP)) {
+				ApplicableRegionSet set = rm.getApplicableRegions(p.getLocation());
+				if (!set.testState(null, DefaultFlag.PVP)) {
 					if (plugin.disabledMessage) {
 						p.sendMessage(plugin.disabled);
 					}
@@ -281,7 +282,7 @@ public class WeaponListener implements Listener {
 			g.refreshItem(i);
 			return;
 		} else if (weapon.equalsIgnoreCase("Knife")) {
-			p.getInventory().setItem(slot, plugin.wu.rename(i, "§b§oKnife"));
+			p.getInventory().setItem(slot, plugin.wu.rename(i, "Â§bÂ§oKnife"));
 		} else {
 			Grenade gr = new Grenade(weapon, p, plugin);
 			gr.refreshItem();
@@ -313,7 +314,7 @@ public class WeaponListener implements Listener {
 			if (p.getMetadata("Headshot").size() > 0) {
 				boolean headshot = (boolean) p.getMetadata("Headshot").get(0).value();
 				if (headshot) {
-					addition = "§4\u271B";
+					addition = "Â§4\u271B";
 				}
 			}
 			event.setDeathMessage(plugin.death.replace("%killer%", k.getName()).replace("%player%", p.getName() + addition).replace("%weapon%", weapon));
